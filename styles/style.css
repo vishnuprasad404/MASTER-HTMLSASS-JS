@@ -1,1 +1,18 @@
-/*# sourceMappingURL=style.css.map */
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.card .text {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
