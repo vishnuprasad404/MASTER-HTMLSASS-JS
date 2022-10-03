@@ -2,13 +2,23 @@ let cardContainer = document.querySelector(".card-container");
 let card = document.querySelector(".card");
 let text = document.querySelector(".text");
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const apiUrl = "http://localhost:3000/";
+fetch(apiUrl)
+  .then((res) => {
+    res.json().then((data) => {
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        let prevCard = document.querySelector(".card-container").innerHTML;
+        cardContainer.innerHTML =
+          prevCard +
+          `<div class="card">
+             <h1 class="text">${data[i].name}</h1>
+          </div>`;
+        }
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
-for (let i = 0; i < arr.length; i++) {
-  let prevCard = document.querySelector(".card-container").innerHTML;
-  cardContainer.innerHTML =
-    prevCard +
-    `<div class="card">
-       <h1 class="text">${arr[i]}</h1>
-    </div>`;
-}
+
