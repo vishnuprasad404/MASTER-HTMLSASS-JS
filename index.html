@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,24 @@
     <link rel="stylesheet" href="styles/style.css">
     <title>Lern web dev</title>
 </head>
-<body>
-    <div class="card-container">
 
-        <!-- <div class="card">
-            <h1 class="text">0</h1>
-        </div> -->
+<body >
+    <div class="form-container">
+        <form action="/" method="GET" name="form">
+            <input type="text" name="username" class="username inp" placeholder="Username" id="username"
+                onchange="validateUsername(document.form.username)" x-webkit-speech >
+            <span class="error username-error"></span>
+            <input type="email" name="email" class="email inp" placeholder="Email" id="email"
+                onchange="validateEmail(document.form.email)">
+            <span class="error email-error"></span>
+            <input type="password" name="password" class="email inp" placeholder="Password" id="password"
+                onchange="validatePassword(document.form.password)">
+            <span class="error password-error"></span>
+            <input type="button" class="inp submit-btn" value="Submit" onclick="submitForm()">
+            <input type="file" capture="enviornment" accept="image/*">
+        </form>
     </div>
 </body>
 <script src="index.js"></script>
+
 </html>

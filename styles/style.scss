@@ -1,18 +1,32 @@
-.card-container{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.card {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
 
-    .text {
-        color: white;
-    }
+
+.form-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inp{
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.error{
+    color: red;
+    letter-spacing: 1px;
+    font-size: 11px;
 }
